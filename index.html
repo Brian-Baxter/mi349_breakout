@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
+<canvas id="myCanvas" width="480" height="450"></canvas>
 
 <script>
     var canvas = document.getElementById("myCanvas");
@@ -20,17 +20,17 @@
     var dx = 2;
     var dy = -2;
     var paddleHeight = 10;
-    var paddleWidth = 75;
+    var paddleWidth = 95;
     var paddleX = (canvas.width-paddleWidth)/2;
     var rightPressed = false;
     var leftPressed = false;
-    var brickRowCount = 5;
-    var brickColumnCount = 3;
-    var brickWidth = 75;
+    var brickRowCount = 6;
+    var brickColumnCount = 4;
+    var brickWidth = 65;
     var brickHeight = 20;
     var brickPadding = 10;
-    var brickOffsetTop = 30;
-    var brickOffsetLeft = 30;
+    var brickOffsetTop = 60;
+    var brickOffsetLeft = 20;
     var score = 0;
     var lives = 3;
 
@@ -102,7 +102,7 @@
     }
     function drawPaddle() {
         ctx.beginPath();
-        ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+        ctx.rect(paddleX, canvas.height-paddleHeight-3, paddleWidth, paddleHeight);
         ctx.fillStyle = "#0095DD";
         ctx.fill();
         ctx.closePath();
